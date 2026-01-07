@@ -1,14 +1,13 @@
-# Use .set noreorder to prevent the assembler from filling branch
-# delay slots, if you want to fill delay slots manually.
-# .set noreorder
+
 .data
 string1: .asciiz "Name: "
 string2: .asciiz "Mohanathas\n"
 
 string3: .asciiz "Address: "
+string4: .asciiz "Jaffna\n "
 
 string5: .asciiz "Age: "
-age: .word 22
+age: .word 20
 
 .text
 
