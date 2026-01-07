@@ -5,7 +5,7 @@ output1: .asciiz "Hello"
 output2: .asciiz "!Welcome to Assembly language Programme"
 
 .text
-_.globl main
+.globl main
 main: 
 la $a0,inputmessage
 li $v0,4
@@ -28,6 +28,7 @@ syscall
 	li $v0,4
 	syscall
 	
-    #Exit Program
 	li $v0, 10
-    syscall
+	syscall
+	
+	
