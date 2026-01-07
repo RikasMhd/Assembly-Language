@@ -1,15 +1,12 @@
 .data
-inputmessage: .asciiz "What's Your Name?"
+inputmessage: .asciiz "What's Your Name?\n"
 name: .space 10
-output1: .asciiz "Hello"
-output2: .asciiz "!Welcome to Assembly language Programme"
+output1: .asciiz "Hello "
+output2: .asciiz "Welcome to Assembly language Programming!"
 
 .text
 .globl main
 main: 
-la $a0,inputmessage
-li $v0,4
-syscall  
 	
 	la $a0,name
 	li $a1,10
@@ -28,7 +25,6 @@ syscall
 	li $v0,4
 	syscall
 	
+    #Exit Program
 	li $v0, 10
-	syscall
-	
-	
+    syscall
