@@ -1,17 +1,7 @@
-Question 1(Ans is PrintName.s)
-Read two integers and print their total. 
-Note: Do not print any messages for reading inputs or for the output.
+An Assembly Language Program (ALP) is a low-level program written using mnemonics that directly correspond to machine instructions of a specific processor (like 8086, x86, ARM).Assembly language is a low-level programming language that is close to hardware.
+Each instruction performs a single CPU operation.
+🔹 It is processor dependent
+🔹 Faster execution
+🔹 Used in embedded systems, OS, device drivers
 
-23 56
-79
-
-Write an assembly language program to print the following:
-
-Name: Mohanathas
-
-Address: Jaffna
-
-Age: 20
-
-
-
+There is My Assembly Language Programmes.It Explains How CPU Responds Instructions and Works.
