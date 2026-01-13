@@ -1,5 +1,5 @@
 .data #Stores strings to be printed.
-name: .asciiz "Name: " #means ASCII string ending with null character (\0).
+name: .asciiz "Name: " #Means ASCII string ending with null character (\0).
 sub: .space 50  #Reserve memory for string
 .text
 .globl main
