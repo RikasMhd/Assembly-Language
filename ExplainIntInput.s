@@ -1,6 +1,7 @@
 .data #Under .data Variables are Declared
 .text #start of executable instructions
 .globl main #makes main visible to the system (program entry point)
+
 main:
 #Reading the first Integer
 	li $v0,5
