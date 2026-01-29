@@ -26,7 +26,7 @@ main:    					#Program execution starts at main
 	li $v0,4        
 	syscall
 	
-	addi $t0, 1  			#Adds 1 to the value in $t0.Updates the loop counter to the next number
+	addi $t0, 1  			#Adds 1 to the value in $t0.Updates the loop counter to the next number.$t0=$t0+1
 	ble $t0, $t1, loop   	#ble means branch if less than or equal
 
 	li $v0, 10   			#Syscall 10 exits the program.
@@ -35,4 +35,5 @@ main:    					#Program execution starts at main
 	
 
 	
+
 
