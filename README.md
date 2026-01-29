@@ -10,11 +10,12 @@ File Name:SumInt
 
 
                                                     ----------Loops-----
-Exercise 1:
-
-Create three integer variables num1, num2 and num3.
-Read three numbers and store them in these variables.
-Find the sum of the values in these three variables and print it.
+File Name:SumOfThreeNumbers
+  >Create three integer variables num1, num2 and num3.
+  >Read three numbers and store them in these variables.
+  >Find the sum of the values in these three variables and print it.
+    >Input:15 20 5
+    >Output:40
 
 File Name:Arrays
   >Read 5 numbers and store them in an array.
