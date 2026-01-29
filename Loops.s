@@ -1,5 +1,6 @@
 .data
 string1: .asciiz "Sequence: "   #Stores the string "Sequence:" in memory.
+string2: .asciiz " , "
 count: .word 20    #count is defined but not used in this program.
 
 .text
@@ -20,6 +21,10 @@ main:    					#Program execution starts at main
 	move $a0,$t0  			#$a0 is the register used to pass arguments to syscalls.This instruction copies the number to be printed into $a0.Now $a0 holds the number to print
 	li $v0,1				#Loads 1 into $v0.Syscall code 1 = print integer
 	syscall
+
+	la $a0,string2 		
+	li $v0,4        
+	syscall
 	
 	addi $t0, 1  			#Adds 1 to the value in $t0.Updates the loop counter to the next number
 	ble $t0, $t1, loop   	#ble means branch if less than or equal
@@ -30,3 +35,4 @@ main:    					#Program execution starts at main
 	
 
 	
+
