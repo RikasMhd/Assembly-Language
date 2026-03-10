@@ -27,48 +27,55 @@ loop1:
 	la $a0, values
 	syscall
 	
-	li $v0, 5
+	li $v0, 5		#Read Value (Ex:num=5,  store 5 values)
 	syscall
 	
-	sw $v0, 0($t1)
+	sw $v0, 0($t1) 		#store value arr[1],arr[2],....
 	
-    addi $t1, $t1, 4
-	addi $t2, $t2, 1
+    addi $t1, $t1, 4		#Move to Next Array Position
+	addi $t2, $t2, 1		#Increase Counter
 	
     j loop1
 
+#Start Finding Min and Max
 done_loop1:
 	la $t1, array		
-	lw $t3, 0($t1)		
-	move $t4, $t3		
+	lw $t3, 0($t1)		#minimum
+	move $t4, $t3		#Maximum  :  array[0] = 8, max,min=8
 	
-	li $t2, 1            
+	#Prepare Second Loop
+	li $t2, 1            #Start from second element.
     addi $t1, $t1, 4
-	
-loop2:
+
+#Find Min & Max
+loop2:			
     beq $t2, $t0, done_loop2
 	
-	lw $t5, 0($t1)
-	blt $t5, $t3, update_min
-	
-check_max:
-	bgt $t5, $t4, update_max
+	lw $t5, 0($t1)		#Load Next Array Value
+	blt $t5, $t3, update_min		#Check Minimum     #if current_value < min  =update min
 
-continue:
-    addi $t1, $t1, 4
+#Check Maximum
+check_max:		
+	bgt $t5, $t4, update_max		#if current_value > max=update max
+
+#Continue Loop		
+continue:		
+    addi $t1, $t1, 4		#Move to next array element
 	addi $t2, $t2, 1
     j loop2
 
-update_min:
-    move $t3, $t5
+#Update Minimum
+update_min:		
+    move $t3, $t5		#min = current value
     j check_max
 
-update_max:
-    move $t4, $t5
+#Update Maximum
+update_max:		
+    move $t4, $t5		##max = current value
     j continue
 
-done_loop2:
-	
+done_loop2:				
+#Print Minimum
     li $v0, 4
     la $a0, minMsg
     syscall
@@ -77,6 +84,7 @@ done_loop2:
     move $a0, $t3
     syscall
 
+#Print Minimum
     li $v0, 4
     la $a0, maxMsg
     syscall
