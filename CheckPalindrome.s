@@ -24,6 +24,8 @@ li $t1,0
 len_loop:
 lb $t2,0($t0)
 beq $t2,$zero,check_pal
+beq $t2,10,check_pal
+
 addi $t1,$t1,1
 addi $t0,$t0,1
 j len_loop
